@@ -855,11 +855,11 @@ body {
 
 /* ========== 手机端响应式优化 ========== */
 @media (max-width: 900px) {
-  .main-container { flex-direction: column; height: auto; min-height: calc(100vh - 80px); }
-  .map-section { flex: none !important; width: 100% !important; min-height: 45vh; }
-  .map-container { min-height: 45vh; }
-  .panel-section, aside.panel-section { flex: none !important; width: 100% !important; max-height: 55vh !important; border-left: none !important; border-top: 1px solid var(--border); overflow-y: auto !important; }
-  .city-list { max-height: none; overflow-y: auto; }
+  .main-container { flex-direction: column; height: calc(100vh - 80px); overflow: hidden; }
+  .map-section { flex: 0 0 auto !important; width: 100% !important; min-height: 40vh; max-height: 45vh; }
+  .map-container { min-height: 40vh; }
+  .panel-section, aside.panel-section { flex: 1 1 0 !important; min-height: 0 !important; width: 100% !important; border-left: none !important; border-top: 1px solid var(--border); overflow-y: auto !important; }
+  .city-list { max-height: none; }
   .collapsible-body { max-height: 250px; }
   .stat-trend-row { height: 40px; }
   .risk-advice-content { width: 95% !important; max-width: 95% !important; }
@@ -870,7 +870,7 @@ body {
   .header h1 { font-size: 16px; }
   .header-controls { width: 100%; justify-content: center; }
   .header-info { flex-wrap: wrap; justify-content: center; }
-  .map-section { min-height: 35vh; }
+  .map-section { min-height: 35vh; max-height: 38vh; }
   .map-container { min-height: 35vh; }
   .panel-section, aside.panel-section { padding: 10px !important; }
   .section-title { font-size: 13px; }
