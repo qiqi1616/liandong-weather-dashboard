@@ -1048,10 +1048,9 @@ function renderCityList() {
   }
   
   sortedCities.forEach((cityName) => {
-    // 只显示有橙色或红色预警的城市
+    // 显示有预警影响的城市（黄色及以上）
     const _cityWarningsForFilter = getAllWarningsForCity(cityName);
-    const _hasOrangeOrRed = _cityWarningsForFilter.some(w => w.severity === '橙色' || w.severity === '红色');
-    if (!_hasOrangeOrRed) return;
+    if (_cityWarningsForFilter.length === 0) return;
     
     const city = CITY_DATA[cityName];
     const filteredProps = getFilteredProps(cityName);
